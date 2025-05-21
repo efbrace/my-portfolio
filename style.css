@@ -3,39 +3,48 @@
   padding: 0;
   box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+}
 
-button {
+button,
+input,
+textarea {
   border: none;
   font-size: inherit;
   font-family: inherit;
+}
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
 body {
   font-family: "Montserrat", sans-serif;
   background-color: lightgray;
   background-repeat: no-repeat;
-  overflow-x: hidden;
-}
-/****************************************************************** HEADER/ BG */
-header {
-  background-image: url(./assets/hero-svg.svg);
-  background-size: cover;
-  background-position: -180%;
+  position: absolute;
 }
 
 /****************************************************************** NAV */
 nav {
   position: sticky;
-  /* top: 0;
-  left: 0; */
-  /* width: 100%; */
+  top: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-weight: bold;
-  margin: 0 6rem;
-  padding: 1.5rem 0rem;
-  /* background-color: blue; */
+  margin-top: -4.5rem;
+  padding: 1rem 6rem;
+  /* background-color: rgba(0, 0, 255, 0.911); */
+}
+.scrolled {
+  background-color: black;
+  transition: 0.5s ease-in;
+}
+
+.logoColor {
+  color: white;
 }
 nav span {
   font-size: 2rem;
@@ -79,16 +88,27 @@ nav ul li:hover {
 #hero {
   height: 100vh;
   padding: 0 6rem;
+  padding-top: 3rem;
   display: flex;
   /* background-color: blue; */
+
+  background-image: url(./assets/hero-svg.svg);
+  background-size: cover;
+  background-position: -180%;
 }
 
 #hero div {
   width: 50%;
   overflow: hidden;
 }
+#hero .hero-image {
+  display: grid;
+  place-items: center;
+}
+
 #hero img {
-  width: 100%;
+  width: 73%;
+  margin-top: -1rem;
 }
 #hero .hero-content {
   font-family: "Raleway", sans-serif;
@@ -132,6 +152,8 @@ nav ul li:hover {
 }
 /****************************************************************** ABOUT */
 #about {
+  scroll-margin-top: 5rem;
+
   margin-top: 1rem;
   padding: 0 6rem;
   min-height: 100vh;
@@ -207,3 +229,194 @@ nav ul li:hover {
   line-height: 1.5;
 }
 /****************************************************************** SKILLS */
+
+#skills {
+  scroll-margin-top: 5rem;
+
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 1rem;
+  padding: 0 6rem;
+}
+#skills h2 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.25rem;
+
+  border: 4px solid black;
+  padding: 0.7rem 2rem;
+}
+#skills h3 {
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.25rem;
+  margin: 1.5rem 0rem;
+}
+#skills .frontend,
+#skills .backend,
+#skills .other {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+}
+
+#skills .logos-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+#skills span {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  text-transform: uppercase;
+}
+#skills span img {
+  width: 5rem;
+  height: 5rem;
+  object-fit: contain;
+  /* filter: grayscale(500%);
+  transition: 0.2s ease-in-out; */
+}
+/* #skills span img:hover {
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.205);
+  filter: none;
+} */
+
+#skills ul {
+  margin-top: -1.5rem;
+  list-style-type: symbols();
+}
+#skills li {
+  margin: 0.5rem 0rem;
+  padding: 0.2rem 0rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.438);
+}
+
+/****************************************************************** SKILLS */
+#contact {
+  scroll-margin-top: 3rem;
+
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 2rem;
+}
+#contact h2 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.25rem;
+
+  border: 4px solid black;
+  padding: 0.7rem 2rem;
+  margin-top: 2rem;
+}
+#contact p {
+  font-size: 0.9rem;
+  text-align: center;
+  width: 60%;
+  line-height: 1.5;
+}
+#contact form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 1rem;
+  width: 50%;
+}
+#contact form input,
+#contact form textarea {
+  width: 70%;
+  padding: 0.5rem;
+  resize: none;
+  font-size: 1rem;
+  background-color: transparent;
+
+  border-left: 2.5px solid black;
+  border-bottom: 2.5px solid black;
+  transition: 0.3s ease-in;
+}
+#contact form input::placeholder,
+#contact form textarea::placeholder {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: bold;
+  letter-spacing: 1.1px;
+}
+#contact form input:focus,
+#contact form textarea:focus {
+  width: 100%;
+  border: 2px solid black;
+  box-shadow: 0px 0px 5px black;
+}
+
+#contact form button {
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.25rem;
+  border: 3px solid transparent;
+  border-left: 3px solid black;
+  border-right: 3px solid black;
+  padding: 0.5rem 1rem;
+  margin: 1rem 0rem;
+
+  background-color: transparent;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.479);
+  transition: 0.2s ease-in-out;
+}
+#contact form button:hover {
+  border: 3px solid black;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+
+/****************************************************************** FOOTER */
+footer {
+  padding: 2rem 0rem;
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 1rem;
+}
+footer img {
+  width: 2rem;
+}
+footer h4 {
+  letter-spacing: 1.1px;
+  font-weight: 300;
+}
+footer img:hover,
+footer h4:hover,
+footer i:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+footer div {
+  display: flex;
+  justify-content: space-evenly;
+  width: 20%;
+  max-width: 500px;
+  letter-spacing: 1.1px;
+}
+footer div i {
+  font-size: 2rem;
+}
+
+footer p {
+  font-weight: lighter;
+}
+footer span {
+  font-weight: 300;
+}
