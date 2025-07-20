@@ -1,4 +1,5 @@
 import { FaFileDownload } from "react-icons/fa";
+import resume from "../assets/my-resume.pdf"
 
 type props = {
   setNavOpen: React.Dispatch<React.SetStateAction<boolean>>;
@@ -9,7 +10,7 @@ const MobileNav = ({ setNavOpen, navOpen }: props) => {
   return (
     <nav>
       <ul
-        className={`animate-navBar-animation origin-top ${
+        className={`animate-navBar-animation origin-right ${
           navOpen ? "flex" : "hidden"
         } list-none w-screen sm:hidden absolute top-15 left-0 bg-Black/60 flex-col items-center justify-evenly h-[30vh] max-h-[200px]`}
       >
@@ -44,7 +45,7 @@ const MobileNav = ({ setNavOpen, navOpen }: props) => {
 
         <a
           onClick={() => setNavOpen(false)}
-          href="./src/assets/my-resume.pdf"
+          href={resume}
           target="_blank"
           className="w-[100%] h-[100%]  text-White bg-Black/60 text-center grid place-content-center hover:bg-White/70 hover:text-Black focus:bg-White/70 focus:text-Black "
         >

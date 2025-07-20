@@ -19,13 +19,13 @@ html {
   --animate-navBar-animation: navBar-animation 0.3s ease-in-out forwards;
   @keyframes navBar-animation {
     0% {
-      transform: translateX(500px);
+      transform: scaleX(0);
     }
     80% {
-      transform: translateX(-50px);
+      transform: scaleX(1.1);
     }
     100% {
-      transform: translateX(0);
+      transform: scaleX(1);
     }
   }
 }

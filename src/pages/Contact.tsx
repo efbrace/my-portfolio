@@ -1,33 +1,8 @@
-import { useState } from "react";
 import separator from "../assets/about-separator.svg";
 import Heading from "../components/Heading";
 import InputField from "../components/InputField";
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    message: "",
-  });
-
-  const handleChange = (e: any) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Submit logic here
-    console.log(formData);
-    setFormData({
-      name: "",
-      email: "",
-      phone: "",
-      message: "",
-    });
-  };
-
   return (
     <section
       id="contact"
@@ -42,35 +17,18 @@ const Contact = () => {
       <img src={separator} alt="section separator" className="mx-auto mb-6" />
 
       <form
-        onSubmit={handleSubmit}
+        action="https://formspree.io/f/mgvzolzw"
+        method="POST"
         className="flex flex-col items-center gap-4   w-full "
       >
-        <InputField
-          name="name"
-          placeholder="Enter your name"
-          value={formData.name}
-          onChange={handleChange}
-        />
-        <InputField
-          name="email"
-          type="email"
-          placeholder="Enter your email"
-          value={formData.email}
-          onChange={handleChange}
-        />
-        <InputField
-          name="phone"
-          placeholder="Phone Number"
-          value={formData.phone}
-          onChange={handleChange}
-        />
+        <InputField name="name" placeholder="Enter your name" />
+        <InputField name="email" type="email" placeholder="Enter your email" />
+        <InputField name="subject" placeholder="Subject" />
         <InputField
           name="message"
           isTextarea
           placeholder="Type your message"
           rows={6}
-          value={formData.message}
-          onChange={handleChange}
         />
         <button
           type="submit"
