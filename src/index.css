@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+@theme {
+  /* FONTS */
+  --font-Montserrat: "Montserrat", sans-serif;
+  --font-Raleway: "Raleway", sans-serif;
+
+  /* COLORS */
+  --color-Black: black;
+  --color-White: white;
+  --color-Gray: gray;
+  --color-LightGray: lightgray;
+
+  /* NAV ANIMATION */
+  --animate-navBar-animation: navBar-animation 0.3s ease-in-out forwards;
+  @keyframes navBar-animation {
+    0% {
+      transform: translateX(500px);
+    }
+    80% {
+      transform: translateX(-50px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+}
