@@ -22,11 +22,18 @@ type DesignProject = {
 
 const webProjects: WebProject = [
   {
-    title: "Library Management App",
-    iframeSrc: "https://je-library.netlify.app/",
-    url: "https://je-library.netlify.app/",
+    title: "HealthLink",
+    iframeSrc: "https://healthlink01.netlify.app/",
+    url: "https://healthlink01.netlify.app/",
     description:
-      "A full-stack book management system with a RESTful API and responsive frontend. Built with Node.js, Express, and React. Supports user-friendly book listing, search (by title, author, genre), and CRUD operations, with backend features like validation, structured JSON responses, and Swagger-based documentation.",
+      "A MERN stack healthcare platform that connects patients with verified medical specialists. Features an admin dashboard for reviewing and approving specialist applications based on submitted certifications and credentials. Patients can browse and connect with approved specialists through a clean, responsive user interface.",
+  },
+  {
+    title: "JE-Adverts",
+    iframeSrc: "https://je-advertss.netlify.app/",
+    url: "https://je-advertss.netlify.app/",
+    description:
+      "A MERN stack advertisement management platform focused on cosmetic products. Features role-based authentication for vendors and users, allowing vendors to create, edit, and delete their own adverts with image uploads. Users can browse all adverts, search and filter by category, price, or keywords, and view detailed advert pages. Includes responsive design and a vendor dashboard for advert management.",
   },
   {
     title: "React E-Commerce Store",

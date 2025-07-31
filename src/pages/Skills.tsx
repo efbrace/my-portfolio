@@ -56,7 +56,7 @@ const Skills = () => {
         <h3 className="text-sm sm:text-md font-bold uppercase tracking-widest border-black border-b w-full mb-2">
           Experience
         </h3>
-        <div className="list-disc pl-5 text-left space-y-1">
+        <div className="list-disc pl-5 text-left space-y-2">
           {experience.map((expi, index) => (
             <div
               className="text-lg text-Black/70 border-b-1 border-Black/30"
@@ -66,7 +66,6 @@ const Skills = () => {
               <p className="text-sm text-gray-700">
                 {expi.organization} – {expi.location}
               </p>
-              <p className="text-sm text-gray-500">{expi.date}</p>
             </div>
           ))}
         </div>

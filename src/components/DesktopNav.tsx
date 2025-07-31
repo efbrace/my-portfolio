@@ -1,5 +1,4 @@
 import { FaFileDownload } from "react-icons/fa";
-import resume from "../assets/my-resume.pdf";
 
 const DesktopNav = () => {
   return (
@@ -26,8 +25,8 @@ const DesktopNav = () => {
           </li>
         </a>
 
-        <a href={resume} target="_blank">
-          <li className="py-[0.2rem] px-3.5 rounded-4xl text-sm text-Black transition-all duration-200 ease-in-out bg-White hover:bg-LightGray hover:text-Black flex items-center gap-1">
+        <a href="https://drive.google.com/file/d/1RXHsJmNemsneEsMobR18mtbv-FuSCLAE/view?usp=drive_link" target="_blank">
+          <li className="py-[0.2rem] px-3.5 rounded-4xl text-sm text-Black transition-all duration-200 ease-in-out bg-White hover:bg-LightGray hover:text-Black flex gap-1">
             Download CV <FaFileDownload className="text-sm" />
           </li>
         </a>

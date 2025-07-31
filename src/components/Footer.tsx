@@ -1,4 +1,4 @@
-import { FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa6";
+import { FaGithub, FaLinkedin, FaYoutube } from "react-icons/fa6";
 import arrow from "../assets/double-arrow.svg";
 
 const Footer = () => {
@@ -19,11 +19,11 @@ const Footer = () => {
 
       <div className="flex justify-evenly w-[50%] max-w-[300px] text-2xl">
         <a
-          href="https://www.facebook.com/"
+          href="https://www.youtube.com/@efbmediaa?sub_confirmation=1"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <FaFacebook className="hover:opacity-50 transition" />
+          <FaYoutube className="hover:opacity-50 transition" />
         </a>
         <a
           href="https://github.com/efbrace"
@@ -33,7 +33,7 @@ const Footer = () => {
           <FaGithub className="hover:opacity-50 transition" />
         </a>
         <a
-          href="https://www.linkedin.com/"
+          href="https://www.linkedin.com/in/flintwood-brace/"
           target="_blank"
           rel="noopener noreferrer"
         >

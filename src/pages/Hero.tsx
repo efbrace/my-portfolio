@@ -1,12 +1,12 @@
 import heroImage from "../assets/hero-image1.png";
-import { FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa6";
+import { FaGithub, FaLinkedin, FaYoutube } from "react-icons/fa6";
 
 type mySocials = { link: string; icon: React.ReactElement }[];
 
 const socials: mySocials = [
   {
-    link: "https://www.facebook.com/",
-    icon: <FaFacebook />,
+    link: "https://www.youtube.com/@efbmediaa?sub_confirmation=1",
+    icon: <FaYoutube />,
   },
   {
     link: "https://github.com/efbrace",

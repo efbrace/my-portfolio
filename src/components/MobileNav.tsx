@@ -1,5 +1,4 @@
 import { FaFileDownload } from "react-icons/fa";
-import resume from "../assets/my-resume.pdf"
 
 type props = {
   setNavOpen: React.Dispatch<React.SetStateAction<boolean>>;
@@ -45,7 +44,7 @@ const MobileNav = ({ setNavOpen, navOpen }: props) => {
 
         <a
           onClick={() => setNavOpen(false)}
-          href={resume}
+          href="https://drive.google.com/file/d/1RXHsJmNemsneEsMobR18mtbv-FuSCLAE/view?usp=drive_link"
           target="_blank"
           className="w-[100%] h-[100%]  text-White bg-Black/60 text-center grid place-content-center hover:bg-White/70 hover:text-Black focus:bg-White/70 focus:text-Black "
         >

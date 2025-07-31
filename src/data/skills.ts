@@ -1,8 +1,10 @@
 import html5 from "../assets/skills-logos/html5.png";
 import css3 from "../assets/skills-logos/css3.png";
+import tailwindcss from "../assets/skills-logos/tailwind-css.png"
 import javascript from "../assets/skills-logos/java-script.png";
 import react from "../assets/skills-logos/react.png";
 import figma from "../assets/skills-logos/figma.png";
+
 
 import nodejs from "../assets/skills-logos/nodejs.png";
 import mongodb from "../assets/skills-logos/mongodb.png";
@@ -32,7 +34,6 @@ type Experience = {
   role: string;
   organization: string;
   location: string;
-  date: string;
 };
 
 const techSkills: TechSkills[] = [
@@ -41,6 +42,7 @@ const techSkills: TechSkills[] = [
     skills: [
       { imgSrc: html5, label: "html5" },
       { imgSrc: css3, label: "css3" },
+      { imgSrc: tailwindcss, label: "tailwind-css" },
       { imgSrc: javascript, label: "Javascript" },
       { imgSrc: react, label: "React" },
       { imgSrc: figma, label: "Figma" },
@@ -74,7 +76,7 @@ const techSkills: TechSkills[] = [
 ];
 
 const softSkills: SoftSkills = [
-  "Strong leadership abilitie, fostering teamwork.",
+  "Strong leadership abilities, fostering teamwork.",
   "Effective communication skills, including active listening and delivering engaging presentations.",
   "Creativity",
   "Time Management",
@@ -86,25 +88,21 @@ const experience: Experience[] = [
     role: "Backend Developer Intern",
     organization: "Meltwater Entrepreneurial School of Technology (MEST)",
     location: "Accra, Ghana",
-    date: "05/2025 – Present",
   },
   {
     role: "Compliance Officer - National Service",
     organization: "Social Security and National Insurance Trust (SSNIT)",
     location: "Accra, Ghana",
-    date: "01/2024 – 10/2024",
   },
   {
     role: "Registration Officer - National Service",
     organization: "Social Security and National Insurance Trust (SSNIT)",
     location: "Accra, Ghana",
-    date: "11/2023 – 12/2023",
   },
   {
     role: "Quality Control Analyst - Intern",
     organization: "Volta Star Textiles Limited",
     location: "Juapong, Ghana",
-    date: "11/2023 – 12/2023",
   },
 ];
 
